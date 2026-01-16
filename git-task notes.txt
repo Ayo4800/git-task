@@ -1,0 +1,60 @@
+
+command used:
+git status
+
+output:
+on branch master
+No commits yet
+nothing to commit (create/copy files and use "git add" to track)
+
+Note/Meaning:
+- The repository is newly created
+- There are not commits yet
+- The working directory is clean (no files to commit)
+
+
+Created file: hello_world.js
+Code inside: console.log("Hello World!");
+
+Command used:
+git status
+Result:
+Git shows hello_world.js and git-task note(my repporting notes) under Untracked files, meaning Git has noticed the files exists but it is not beingtracked yet(not added to the repo)
+
+After running git add hello_world.js
+Command:
+git status
+Output/Notes:
+- hello_world.js is now tracked and staged under changes to be committed
+- git-task notes.txt is still untracked under untracked files
+
+Changes to be committed:
+  new file: hello_world.js
+
+Untracked files:
+  git-task notes.txt
+
+After editing hello_world.js to print "Git is awesome":
+git status
+Result:
+- hello_world.js show under changes to be committed (staged version)
+- hello_world.js also shows under changes not staged for commit (modified but not staged)
+- git-task notes.txt is still untracked
+
+Command used:
+git add hello_world.js
+git status
+Result:
+- hello_world.js is shown under changes to be committed(staged)
+- git-task notes.txt is still under untracked files
+Changes to be committed:
+  new file: hello_world.js
+
+Untracked files:
+  git-task notes.txt
+
+I ran:
+git commit -m "Add hello_world and update message"
+
+- commit was created successfully
+- git status show untracked file: git-task notes.txt, so the repo is clean execpt for that untracked file.
